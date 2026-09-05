@@ -36,4 +36,28 @@ public class FileNameAnalyzer {
 
         sc.close();
     }
+    public static String classifyFile(String extension) {
+
+        if (extension.equals("txt")
+                || extension.equals("pdf")
+                || extension.equals("docx")) {
+
+            return "Document";
+
+        } else if (extension.equals("jpg")
+                || extension.equals("png")
+                || extension.equals("gif")) {
+
+            return "Image";
+
+        } else if (extension.equals("mp3")
+                || extension.equals("wav")) {
+
+            return "Audio";
+
+        } else {
+
+            return "Other";
+        }
+    }
 }
