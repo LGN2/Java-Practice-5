@@ -47,4 +47,19 @@ public class CsvLineParser {
 
         sc.close();
     }
+    public static String classifyAge(int age) {
+
+        if (age < 18) {
+
+            return "Minor";
+
+        } else if (age <= 64) {
+
+            return "Adult";
+
+        } else {
+
+            return "Senior";
+        }
+    }
 }
