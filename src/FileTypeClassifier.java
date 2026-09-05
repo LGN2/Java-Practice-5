@@ -56,4 +56,15 @@ public class FileTypeClassifier {
         IO.println("Code Files: " + codeCount);
         IO.println("Other Files: " + otherCount);
     }
+    public static String getExtension(String fileName) {
+
+        int dotIndex = fileName.lastIndexOf('.');
+
+        if (dotIndex == -1 || dotIndex == fileName.length() - 1) {
+
+            return "";
+        }
+
+        return fileName.substring(dotIndex + 1).toLowerCase();
+    }
 }
