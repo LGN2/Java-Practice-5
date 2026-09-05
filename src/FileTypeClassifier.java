@@ -67,4 +67,28 @@ public class FileTypeClassifier {
 
         return fileName.substring(dotIndex + 1).toLowerCase();
     }
+    public static String classifyFile(String extension) {
+
+        if (extension.equals("txt")
+                || extension.equals("pdf")
+                || extension.equals("docx")) {
+
+            return "Document";
+
+        } else if (extension.equals("jpg")
+                || extension.equals("png")) {
+
+            return "Image";
+
+        } else if (extension.equals("java")
+                || extension.equals("py")
+                || extension.equals("js")) {
+
+            return "Code";
+
+        } else {
+
+            return "Other";
+        }
+    }
 }
