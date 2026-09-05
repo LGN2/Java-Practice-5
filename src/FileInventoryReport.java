@@ -116,4 +116,18 @@ public class FileInventoryReport {
                 largestFile + " (" + largestSize + " KB)"
         );
     }
+    public static String getExtension(String fileName) {
+
+        int dotIndex = fileName.lastIndexOf('.');
+
+        if (dotIndex == -1
+                || dotIndex == fileName.length() - 1) {
+
+            return "none";
+        }
+
+        return fileName
+                .substring(dotIndex + 1)
+                .toLowerCase();
+    }
 }
