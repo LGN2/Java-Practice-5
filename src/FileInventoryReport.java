@@ -130,4 +130,35 @@ public class FileInventoryReport {
                 .substring(dotIndex + 1)
                 .toLowerCase();
     }
+    public static String classifyFile(String extension) {
+
+        if (extension.equals("txt")
+                || extension.equals("pdf")
+                || extension.equals("docx")
+                || extension.equals("xlsx")) {
+
+            return "Document";
+
+        } else if (extension.equals("jpg")
+                || extension.equals("png")
+                || extension.equals("gif")) {
+
+            return "Image";
+
+        } else if (extension.equals("mp3")
+                || extension.equals("wav")) {
+
+            return "Audio";
+
+        } else if (extension.equals("java")
+                || extension.equals("py")
+                || extension.equals("js")) {
+
+            return "Code";
+
+        } else {
+
+            return "Other";
+        }
+    }
 }
